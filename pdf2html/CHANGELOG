@@ -1,0 +1,11 @@
+20010309210737: Repaired a bug that caused bad skips if more than 255 microlines were
+                to be skipped.
+20010309210855: Repaired a bug in make clean that caused incomplete cleanup
+20010309211247: Repaired the comment at the beginning of pgm2eps9
+20010309212054: Added INSTALL
+20010309212150: Release version 1.2
+20011124194449:	Added #include <sys/types.h> to printer.c
+20011124194449:	Released version 1.3
+
+
+

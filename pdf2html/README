@@ -1,0 +1,39 @@
+pdf2html
+--------
+
+(c) 2000 Karel Kulhavy, Clocksoft
+<clock@atrey.karlin.mff.cuni.cz>
+
+Action:
+-------
+
+Generates series of html's with png's from pdf at arbitrary dpi
+with 17*15 oversampling.
+
+Requirements:
+-------------
+
+Aladdin ghostscript at "gs" command, libpng. libpng depends on zlib.
+Fast machine. It is good to have Aladdin Ghostscript 6.01 as 5.10 usually
+crashes on segfault for some pdf documents. When it crashes, it crashes
+persistently at the same page.
+
+Installation:
+-------------
+
+1)  Download pdf2html.tgz
+2)  tar xzvf pdf2html.tgz
+3)  cd pdf2html
+4)  make
+5)  download necessary pdf into current directory, name it <basename>.pdf
+6)  Edit pdf2html and setup the variables at the very beginnin to fit your
+    needs. page offset is a number which bears the very first page.
+7)  Edit index.dir, which will form Contents Index. Format of the line is decimalpage number, where 1
+    is always the page of the pdf that comes first, then follows non-decimal-cipher char, and then the comment,
+    after the comment a newline. Comment may contain html tags.
+8)  pdf2html <the_pdf> [starting_page]. Pages are numbered from 0. When you convert a postscript,
+    you cannot use the starting page.
+9)  You'll find html in basename*.html, png's in basename*.png. The basename
+    as well as many other args can be changed in 6). There will be index.html as a root.
+10)  Move the html's and png's into desired place along with left.png, 
+    right.png, and up.png.
